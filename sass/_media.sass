@@ -14,6 +14,10 @@
                 display: none
 
     .filter
+        &_letters
+            margin-bottom: 0
+            span
+                margin-bottom: 20px
         &_wrapper
             flex-wrap: wrap
             padding-right: inherit
@@ -21,6 +25,26 @@
         &_input
             margin-right: auto
             margin-left: auto
+
+    .sidebar
+        &_googleplay
+            display: flex
+            justify-content: center
+    .section
+        &_newsBook
+            .news
+                &_button
+                    margin-bottom: 30px
+            .filter
+                &_wrapper
+                    justify-content: space-around
+                &_input
+                    margin-bottom: 15px
+                    margin-left: 0
+                    margin-right: 50px
+                &_button
+                    .button
+                        margin-right: auto
 
     .mobile-menu
         background: #ffffff
@@ -135,6 +159,27 @@
         &_button
             margin-top: 15px
 
+    .section
+        &_bookMore
+            .book
+                .img
+                    max-width: 280px
+                    margin: 0 auto
+                    margin-bottom: 30px
+                    img
+                        width: 280px
+        &_bookMore
+            .book
+                display: flex
+                flex-direction: column
+        &_newsBook
+            .filter
+                &_input
+                    margin-right: 0
+                &_button
+                    .button
+                        width: 100%
+
     .footer
         &_wrapper
             flex-wrap: wrap
@@ -155,6 +200,42 @@
 	
 // ≥768px
 +media-breakpoint-down(sm)
+
+
+    .section
+        &_newsAuthor
+            .search
+                &_title
+                    margin-top: 15px
+                &_input
+                    flex-direction: column
+                    .input
+                        margin-bottom: 10px
+                        input
+                            border-right: 1px solid #999999
+                &_item
+                    padding: 15px
+        &_workBrand
+            .team
+                .news
+                    &_cart
+                        margin-bottom: 30px!important
+                    &_title
+                        max-width: 265px
+                        margin-left: auto
+                        margin-right: auto
+            .more
+                &_title
+                    font-size: 40px
+        &_newsBook
+            .news
+                &_wrapper
+                    &.beforeBorder
+                        &::before
+                            left: 2px
+                            width: 103%
+                &_button
+                    width: 100%
 
     .footer
         &_wrapper
@@ -234,14 +315,50 @@
                 &_logo
                     span
                         font-size: 14px
-                        
+
+    .filter
+        &_letters
+            span
+                margin-right: 13px
+                text-align: center
+
     .section
+        &_workBrand
+            .section_title
+                padding-bottom: 30px
+            .news
+                margin-bottom: 35px!important
+            .team
+                .news
+                    &_info
+                        margin-top: 20px
+            .more_title
+                margin-top: 20px
+        &_newsCalendar
+            padding-top: 0
+            .filter
+                margin-top: 15px
+                .calendar_wrapper
+                    z-index: 100
+        &_bookMore
+            .section_title
+                font-size: 25px
+                padding-bottom: 30px
         &_title
             font-size: 50px
-        &_newsNews
+        &_newsNews, &_newsAuthor, &_newsBook
             padding-top: 0px
             .filter
                 margin-top: 20px
+        &_newsBook
+            .news
+                &_wrapper
+                    &.beforeBorder
+                        &::before
+                            left: 0
+                            width: 100%
+                    &::after
+                        left: 0!important
 
     .footer
         &_logo

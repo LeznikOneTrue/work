@@ -238,6 +238,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		$('.calendar_days-item').removeClass('active');
 		$(this).toggleClass('active');
 	})
+
+	$('.filter_letters span').on('click', function() {
+		$('.filter_letters span').removeClass('active');
+		$(this).toggleClass('active');
+	})
 	
 	$('.calendar_title').on('click', function () {
 		$(this).siblings('.calendar_wrapper').slideToggle();
@@ -255,16 +260,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	$('.select').styler();
 
-	jQuery(".gallery_fancy-img").owlCarousel({
-		loop: true,
-		autoplay: false,
-		autoplayTimeout: 4000,
-		autoplaySpeed: 700,
-		autoWidth: false,
-		items: 1,
-		nav: true,
-		dots: false,
-		navText: ['<i class="fas fa-angle-left"></i>','<i class="fas fa-angle-right"></i>'],
-
- 	 })
 });
